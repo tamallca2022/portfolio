@@ -12,7 +12,7 @@
 
     <meta name="description" content="" />
 
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="./favicon.png">
 
     <meta name="theme-color" content="">
 
@@ -21,6 +21,9 @@
 
     <!-- AOS CDN -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- FANCYBOX CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -87,7 +90,7 @@
                         <div class="col-md-6">
                             <div class="text-block" data-aos="fade-left">
                                 <h2 class="section-title">about me</h2>
-                                <p>I'm Tamal Sen, a Web designer and front-end developer from Ashoknagar, West Bengal. Despite being a Fresher in this field, I have experience designing and coding multiple websites.</p>
+                                <p>I'm Tamal Sen, a Web designer and front-end developer from Ashoknagar, West Bengal. Despite being a Fresher in this field, I have experience designing and coding multiple websites. JavaScript and JQuery are currently on my learning list.</p>
 
                                 <p>Additionally, I am skilled in Graphics Design and have the ability to create logos, banners, business cards, social media posts, brochures, and flyers. My alma mater is <a href="https://learncomputer.in" target="_blank" class="link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Web Design and Developement Training Institute at Habra">Learn Computer Academy, Habra</a>. You can view my portfolio below.</p>
                                 <p></p>
@@ -112,7 +115,7 @@
                                         <img src="images/my-skills-icon-01.png" alt="Photoshop Icon">
                                     </div>
                                     <h3>photoshop</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>Photoshop is well-known to me. I can design a logo, social media posts, cards, and a website/landing page for you.</p>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -121,7 +124,7 @@
                                         <img src="images/my-skills-icon-02.png" alt="Photoshop Icon">
                                     </div>
                                     <h3>html</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>HTML 5 is my area of expertise. When working on a project, I tend to use semantic tags more often.</p>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -130,7 +133,7 @@
                                         <img src="images/my-skills-icon-03.png" alt="Photoshop Icon">
                                     </div>
                                     <h3>css</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>Web design's coolest feature is CSS. It allows me to handle layouts and animations in a creative way.</p>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -139,7 +142,7 @@
                                         <img src="images/my-skills-icon-04.png" alt="Photoshop Icon">
                                     </div>
                                     <h3>bootstrap</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>Almost all websites need to be mobile-friendly. Bootstrap is my favorite framework. This robust and modern framework is my specialty. </p>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +161,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="img-card" data-aos="fade-up">
-                                    <img src="images/work-img-01.jpg" alt="Flyer Design" class="img-fluid" />
+                                    <a data-fancybox data-src="images/work-img-01-large.jpg" data-caption="Social Media Post Design">
+                                        <img src="images/work-img-01-small.jpg" alt="Flyer Design" class="img-fluid" />
+                                    </a>
                                     <div class="overlay">
                                         <div class="text-content">
                                             <h3>flyer design</h3>
@@ -169,16 +174,95 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="img-card" data-aos="fade-up">
-                                    <img src="images/work-img-01.jpg" alt="Flyer Design" class="img-fluid" />
+                                    <a data-fancybox data-src="images/work-img-02-large.jpg" data-caption="Black Hardwoods - Logo for Marble Company">
+                                        <img src="images/work-img-02-small.jpg" alt="Brochure Design" class="img-fluid" />
+                                    </a>
                                     <div class="overlay">
                                         <div class="text-content">
-                                            <h3>flyer design</h3>
+                                            <h3>logo design</h3>
                                             <p>photoshop</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="col-md-6">
+                                <div class="img-card" data-aos="fade-up">
+                                    <a data-fancybox data-src="images/work-img-03-large.jpg" data-caption=" Brochure Design">
+                                        <img src="images/work-img-03-small.jpg" alt="Brochure Design" class="img-fluid" />
+                                    </a>
+                                    <div class="overlay">
+                                        <div class="text-content">
+                                            <h3>brochure design</h3>
+                                            <p>photoshop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-card" data-aos="fade-up">
+                                    <a data-fancybox data-src="images/work-img-04-large.png" data-caption=" Landing Page Design">
+                                        <img src="images/work-img-04-small.jpg" alt="Brochure Design" class="img-fluid" />
+                                    </a>
+                                    <div class="overlay">
+                                        <div class="text-content">
+                                            <h3>landing page design</h3>
+                                            <p>photoshop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-card" data-aos="fade-up">
+                                    <a data-fancybox data-src="images/work-img-05-large.png" data-caption=" Landing Page Design">
+                                        <img src="images/work-img-05-small.jpg" alt="Brochure Design" class="img-fluid" />
+                                    </a>
+                                    <div class="overlay">
+                                        <div class="text-content">
+                                            <h3>landing page design</h3>
+                                            <p>photoshop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-card" data-aos="fade-up">
+                                    <a data-fancybox data-src="images/work-img-06-large.jpg" data-caption=" Landing Page Design">
+                                        <img src="images/work-img-06-small.jpg" alt="Brochure Design" class="img-fluid" />
+                                    </a>
+                                    <div class="overlay">
+                                        <div class="text-content">
+                                            <h3>landing page design</h3>
+                                            <p>photoshop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-card" data-aos="fade-up">
+                                    <a data-fancybox data-src="images/work-img-07-large.jpg" data-caption=" Host Buddy Website Design">
+                                        <img src="images/work-img-07-small.jpg" alt="Brochure Design" class="img-fluid" />
+                                    </a>
+                                    <div class="overlay">
+                                        <div class="text-content">
+                                            <h3>website design</h3>
+                                            <p>photoshop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="img-card" data-aos="fade-up">
+                                    <a data-fancybox data-src="images/work-img-08-large.jpg" data-caption=" Black Hardwoords Website Design">
+                                        <img src="images/work-img-08-small.jpg" alt="Brochure Design" class="img-fluid" />
+                                    </a>
+                                    <div class="overlay">
+                                        <div class="text-content">
+                                            <h3>website design</h3>
+                                            <p>photoshop</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div> <!-- .row -->
                     </div> <!-- .card-section -->
                 </div> <!-- .container -->
@@ -251,7 +335,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
+    <!-- FancyBox CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <!-- FONTAWESOME CDN -->
     <script src="https://kit.fontawesome.com/0f189d9121.js" crossorigin="anonymous"></script>
 
@@ -336,29 +421,27 @@
     </script>
 
     <script>
+        //Get the button:
+        mybutton = document.getElementById("myBtn");
 
-            //Get the button:
-            mybutton = document.getElementById("myBtn");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
 
-            // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() {
-                scrollFunction()
-            };
-
-            function scrollFunction() {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
             }
+        }
 
-            // When the user clicks on the button, scroll to the top of the document
-            function topFunction() {
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-            }
-
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
 
     </script>
 
