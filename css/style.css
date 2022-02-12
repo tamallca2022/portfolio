@@ -334,12 +334,25 @@ ul {
 }
 
 .my-skills-section .card .icon-block {
-    /*
     width: 90px;
     height: 90px;
-*/
+    background-color: var(--clr-primary);
+    border-radius: 40% 60% 64% 36% / 36% 38% 62% 64%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
-    margin: 0 0 50px 0;
+    margin: 0 auto 50px;
+}
+
+.my-skills-section .card-section .row .col-md-3:nth-child(2) .card .icon-block {
+    border-radius: 62% 38% 45% 55% / 37% 34% 66% 63%;
+}
+.my-skills-section .card-section .row .col-md-3:nth-child(3) .card .icon-block {
+    border-radius: 69% 31% 66% 34% / 34% 44% 56% 66%;
+}
+.my-skills-section .card-section .row .col-md-3:nth-child(4) .card .icon-block {
+    border-radius: 65% 35% 38% 62% / 37% 59% 41% 63% ;
 }
 
 .my-skills-section .card h3 {

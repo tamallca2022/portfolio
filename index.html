@@ -194,16 +194,16 @@
                     <form action="https://api.web3forms.com/submit" method="POST" id="form">
                         <input type="hidden" name="access_key" value="8a1edd94-d7b6-45c1-ad7c-15c2450abbf4">
                         <div class="input-box">
-                            <input type="text" class="form-control" placeholder="name" required>
+                            <input type="text" class="form-control" placeholder="name" name="name" required>
                         </div>
                         <div class="input-box">
-                            <input type="email" class="form-control" placeholder="email" required>
+                            <input type="email" class="form-control" placeholder="email" name="email" required>
                         </div>
                         <div class="input-box">
-                            <input type="phone" class="form-control" placeholder="phone" required>
+                            <input type="phone" class="form-control" placeholder="phone" name="phone" required>
                         </div>
                         <div class="input-box">
-                            <textarea class="form-control" placeholder="message"></textarea>
+                            <textarea class="form-control" placeholder="message" name="message"></textarea>
                         </div>
                         <div class="input-box">
                             <input type="submit" class="btn-submit" value="Submit">
@@ -278,59 +278,60 @@
         })
 
     </script>
-    
+
     <!-- AOS JS -->
     <script>
         AOS.init();
 
     </script>
-    
+
     <script>
         const form = document.getElementById("form");
-const result = document.getElementById("result");
+        const result = document.getElementById("result");
 
-form.addEventListener("submit", function (e) {
-  const formData = new FormData(form);
-  e.preventDefault();
-  var object = {};
-  formData.forEach((value, key) => {
-    object[key] = value;
-  });
-  var json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
+        form.addEventListener("submit", function(e) {
+            const formData = new FormData(form);
+            e.preventDefault();
+            var object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            var json = JSON.stringify(object);
+            result.innerHTML = "Please wait...";
 
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    },
-    body: json
-  })
-    .then(async (response) => {
-      let json = await response.json();
-      if (response.status == 200) {
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-green-500");
-      } else {
-        console.log(response);
-        result.innerHTML = json.message;
-        result.classList.remove("text-gray-500");
-        result.classList.add("text-red-500");
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      result.innerHTML = "Something went wrong!";
-    })
-    .then(function () {
-      form.reset();
-      setTimeout(() => {
-        result.style.display = "none";
-      }, 5000);
-    });
-});
+            fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message;
+                        result.classList.remove("text-gray-500");
+                        result.classList.add("text-green-500");
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                        result.classList.remove("text-gray-500");
+                        result.classList.add("text-red-500");
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function() {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 5000);
+                });
+        });
+
     </script>
 
 </body>
