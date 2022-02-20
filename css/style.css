@@ -1,6 +1,3 @@
-@import 'fonts.css';
-@import 'utility.css';
-
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -524,13 +521,14 @@ ul {
     font-size: 16px;
     color: var(--clr-accent);
     line-height: 1.3;
-    text-transform: capitalize;
+    text-transform: uppercase;
     padding: 18px;
     margin: 0;
 }
 
 .reach-me-section .form-section form .input-box .form-control::placeholder {
     color: var(--clr-accent);
+    text-transform: capitalize;
 }
 
 .reach-me-section .form-section form .input-box .form-control:focus {
@@ -560,7 +558,7 @@ ul {
     color: var(--clr-primary);
     background-color: #fff;
 }
-
+.reach-me-section .form-section form .input-box #result{ color: #8bc34a; }
 /*FOOTER START*/
 footer {
     background-color: var(--clr-primary);
