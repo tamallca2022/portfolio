@@ -558,7 +558,11 @@ ul {
     color: var(--clr-primary);
     background-color: #fff;
 }
-.reach-me-section .form-section form .input-box #result{ color: #8bc34a; }
+
+.reach-me-section .form-section form .input-box #result {
+    color: #8bc34a;
+}
+
 /*FOOTER START*/
 footer {
     background-color: var(--clr-primary);
@@ -754,36 +758,29 @@ footer .footer-content .social-links a:hover {
 }
 
 #loader {
-
     opacity: 1;
-
     position: fixed;
-
-    width: 100%;
-
-    height: 100%;
-
+    width: 100vw;
+    height: 100vh;
+    background-color: #191f26;
     -webkit-transform: translateY(0);
-
     -ms-transform: translateY(0);
-
     transform: translateY(0);
-
-    background-color: #fff;
-
     z-index: 999;
-
     -webkit-animation-fill-mode: forwards;
-
     animation-fill-mode: forwards;
-
     -webkit-animation: fadeinall 1s normal both;
-
     animation: fadeinall 1s normal both;
-
     -webkit-animation-delay: 0.3s;
-
     animation-delay: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+#loader img {
+    width: 30vw;
 }
 
 /*Photo Ring*/
