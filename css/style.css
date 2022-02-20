@@ -536,6 +536,7 @@ ul {
 }
 
 .reach-me-section .form-section form .input-box textarea.form-control {
+    resize: none;
     height: 120px;
 }
 
