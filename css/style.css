@@ -81,8 +81,14 @@ ul {
 */
 
 .banner video {
-    height: 100vh;
-    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: ;
 }
 
 .banner header {
@@ -188,7 +194,6 @@ ul {
     align-items: center;
     z-index: 105;
     background-color: rgba(0, 51, 102, 0.9);
-    clip-path: var(--clip);
 }
 
 
