@@ -125,9 +125,11 @@ for (let clickTab of activeLink) {
 }
 //Sidebar Menu List Active Deactive Class
 const activeLinkSidebar = document.querySelectorAll('.sidebar .inner .mobile-nav ul li');
+
 for (let clickTab of activeLinkSidebar) {
     clickTab.addEventListener('click', function () {
         let activeClass = document.querySelectorAll('li.active');
+        console.log(activeClass);
         activeClass[0].classList.remove('active')
         clickTab.classList.add('active');
     })
