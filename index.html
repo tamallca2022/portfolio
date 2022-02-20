@@ -35,8 +35,11 @@
     <main>
         <!-- BANNER START -->
         <div class="banner">
-            <img src="images/banner.jpg" alt="banner" class="img-fluid">
-            <header>
+            <video autoplay muted loop>
+                <source src="video/banner.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <header id="header">
                 <div class="container">
                     <div class="d-flex">
                         <div class="logo-block">
@@ -44,16 +47,21 @@
                         </div>
                         <nav>
                             <ul class="d-flex">
-                                <li class="active"><a href="#">home</a></li>
-                                <li><a href="#">about</a></li>
-                                <li><a href="#">skills</a></li>
-                                <li><a href="#">works</a></li>
-                                <li><a href="#">contact</a></li>
+                                <li class="active"><a href="index.html">home</a></li>
+                                <li><a href="#about-section">about</a></li>
+                                <li><a href="#skills-section">skills</a></li>
+                                <li><a href="#works-section">works</a></li>
+                                <li><a href="#contact-section">contact</a></li>
                             </ul>
                         </nav>
                         <div class="icon-block">
                             <a href="tel:6296941960" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ph: 6296941960"><i class="fa-solid fa-phone"></i></a>
                             <a href="mailto:tamal18111998@gmail.com" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Email: tamal.lca2022@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                        <div class="mobile-menu">
+                            <button type="button" class="menu-btn">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -61,9 +69,9 @@
             <div class="desc">
                 <div class="container">
                     <div class="content">
-                        <h1 data-aos="fade-down" data-aos-delay="300"><span>hi, i am a</span>front-end web designer and developer.</h1>
-                        <p data-aos="fade-down" data-aos-delay="200">I have one-year of learning experience in Graphics Design, Web Design, and Development at Learn Computer Academy, Habra. </p>
-                        <a href="images/resume-of-tamal-sen-frontend-web-designer-and-developer.jpg" class="btn" data-aos="fade-down" download>
+                        <h1 data-aos="fade-down" data-aos-delay="900"><span>hi, i am a</span>front-end web designer and developer.</h1>
+                        <p data-aos="fade-down" data-aos-delay="500">I have one-year of learning experience in Graphics Design, Web Design, and Development at Learn Computer Academy, Habra. </p>
+                        <a href="images/resume-of-tamal-sen-frontend-web-designer-and-developer.jpg" class="btn" data-aos="fade-down" data-aos-delay="100" download>
                             <i class="fa fa-download" aria-hidden="true"></i> download cv
                         </a>
 
@@ -74,20 +82,20 @@
         </div>
 
         <!-- ABOUT SECTION START -->
-        <section class="about-section">
+        <section class="about-section" id="about-section">
             <div class="inner">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="img-block" data-aos="fade-right">
                                 <img src="images/tamal-sen-photo.png" alt="Photo of Tamal Sen" class="img-fluid" />
                                 <div class="img-ring">
-                                    <img src="images/photo-ring.png" alt="photo ring" />
+                                    <img src="images/photo-ring.png" alt="photo ring" class="img-fluid ring" />
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-sm-12">
                             <div class="text-block" data-aos="fade-left">
                                 <h2 class="section-title">about me</h2>
                                 <p>I'm Tamal Sen, a Web designer and front-end developer from Ashoknagar, West Bengal. Despite being a Fresher in this field, I have experience designing and coding multiple websites. JavaScript and JQuery are currently on my learning list.</p>
@@ -102,14 +110,14 @@
         </section>
 
         <!-- MY SKILLS SECTION START -->
-        <section class="my-skills-section">
+        <section class="my-skills-section" id="skills-section">
             <div class="inner">
                 <div class="container">
                     <h2 class="section-title">my skills</h2>
 
                     <div class="card-section">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-12">
                                 <div class="card" data-aos="fade-up">
                                     <div class="icon-block">
                                         <img src="images/my-skills-icon-01.png" alt="Photoshop Icon">
@@ -118,7 +126,7 @@
                                     <p>Photoshop is well-known to me. I can design a logo, social media posts, cards, and a website/landing page for you.</p>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-12">
                                 <div class="card" data-aos="fade-up">
                                     <div class="icon-block">
                                         <img src="images/my-skills-icon-02.png" alt="Photoshop Icon">
@@ -127,7 +135,7 @@
                                     <p>HTML 5 is my area of expertise. When working on a project, I tend to use semantic tags more often.</p>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-12">
                                 <div class="card" data-aos="fade-up">
                                     <div class="icon-block">
                                         <img src="images/my-skills-icon-03.png" alt="Photoshop Icon">
@@ -136,7 +144,7 @@
                                     <p>Web design's coolest feature is CSS. It allows me to handle layouts and animations in a creative way.</p>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3 col-sm-12">
                                 <div class="card" data-aos="fade-up">
                                     <div class="icon-block">
                                         <img src="images/my-skills-icon-04.png" alt="Photoshop Icon">
@@ -152,14 +160,14 @@
         </section>
 
         <!-- MY WORKS SECTION START -->
-        <section class="my-works-section">
+        <section class="my-works-section" id="works-section">
             <div class="inner">
                 <div class="container">
                     <h2 class="section-title">my works</h2>
 
                     <div class="card-section">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-01-large.jpg" data-caption="Social Media Post Design">
                                         <img src="images/work-img-01-small.jpg" alt="Flyer Design" class="img-fluid" />
@@ -172,7 +180,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-02-large.jpg" data-caption="Black Hardwoods - Logo for Marble Company">
                                         <img src="images/work-img-02-small.jpg" alt="Brochure Design" class="img-fluid" />
@@ -185,7 +193,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-03-large.jpg" data-caption=" Brochure Design">
                                         <img src="images/work-img-03-small.jpg" alt="Brochure Design" class="img-fluid" />
@@ -198,7 +206,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-04-large.png" data-caption=" Landing Page Design">
                                         <img src="images/work-img-04-small.jpg" alt="Brochure Design" class="img-fluid" />
@@ -211,7 +219,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-05-large.png" data-caption=" Landing Page Design">
                                         <img src="images/work-img-05-small.jpg" alt="Brochure Design" class="img-fluid" />
@@ -224,7 +232,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-06-large.jpg" data-caption=" Landing Page Design">
                                         <img src="images/work-img-06-small.jpg" alt="Brochure Design" class="img-fluid" />
@@ -237,7 +245,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-07-large.jpg" data-caption=" Host Buddy Website Design">
                                         <img src="images/work-img-07-small.jpg" alt="Brochure Design" class="img-fluid" />
@@ -250,7 +258,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-12">
                                 <div class="img-card" data-aos="fade-up">
                                     <a data-fancybox data-src="images/work-img-08-large.jpg" data-caption=" Black Hardwoords Website Design">
                                         <img src="images/work-img-08-small.jpg" alt="Brochure Design" class="img-fluid" />
@@ -270,13 +278,15 @@
         </section>
 
         <!-- REACH ME SECTION START -->
-        <section class="reach-me-section">
+        <section class="reach-me-section" id="contact-section">
             <div class="container">
                 <h2 class="section-title">reach me</h2>
 
                 <div class="form-section" data-aos="fade-up">
                     <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                        <input type="hidden" name="access_key" value="8a1edd94-d7b6-45c1-ad7c-15c2450abbf4">
+                        <div class="input-box">
+                            <input type="hidden" name="access_key" value="8a1edd94-d7b6-45c1-ad7c-15c2450abbf4">
+                        </div>
                         <div class="input-box">
                             <input type="text" class="form-control" placeholder="name" name="name" required>
                         </div>
@@ -291,8 +301,9 @@
                         </div>
                         <div class="input-box">
                             <input type="submit" class="btn-submit" value="Submit">
+                            <span id="result"></span>
                         </div>
-                        <span id="result"></span>
+                        
                     </form>
                 </div>
             </div>
@@ -303,12 +314,12 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-8 col-sm-12">
                             <div class="copyright-block">
                                 <p>&copy; Copyright 2022. Designed with <i class="fa-solid fa-heart"></i> by <span>tamal sen.</span></p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4 col-sm-12">
                             <div class="social-links">
                                 <a href="https://www.facebook.com/profile.php?id=100076035794075" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="https://wa.me/6296941960"><i class="fa-brands fa-whatsapp"></i></a>
@@ -323,6 +334,22 @@
         <button onclick="topFunction()" id="myBtn" title="Go to top" data-bs-toggle="tooltip" data-bs-placement="top">
             <i class="fa fa-arrow-up" aria-hidden="true"></i>
         </button>
+
+        <!-- SIDEBAR MENU START -->
+        <aside class="sidebar">
+            <div class="inner">
+                <button class="btn-close"></button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li class="active"><a href="index.html">home</a></li>
+                        <li><a href="#about-section">about</a></li>
+                        <li><a href="#skills-section">skills</a></li>
+                        <li><a href="#works-section">works</a></li>
+                        <li><a href="#contact-section">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
 
     </main>
 
@@ -424,10 +451,9 @@
         //Get the button:
         mybutton = document.getElementById("myBtn");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
+        window.addEventListener('scroll', function() {
             scrollFunction()
-        };
+        })
 
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -445,6 +471,60 @@
 
     </script>
 
+    <script>
+        function stickyHeader() {
+            window.addEventListener('scroll', function() {
+                scrollFunction()
+            });
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                    document.getElementById("header").classList.add('sticky');
+                } else {
+                    document.getElementById("header").classList.remove('sticky');
+                }
+            }
+        }
+        stickyHeader();
+
+    </script>
+
+    <script>
+        let menuBtn = document.querySelector('.menu-btn');
+        let sidebar = document.querySelector('.sidebar');
+        let closeBtn = document.querySelector('.btn-close');
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.add('slide-in');
+        });
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('slide-in');
+        })
+
+    </script>
+
+    <script>
+        const activeLink = document.querySelectorAll('header nav ul li');
+        for (let clickTab of activeLink) {
+            clickTab.onclick = function() {
+                let activeClass = document.querySelectorAll('li.active');
+                activeClass[0].classList.remove('active')
+                clickTab.classList.add('active');
+            }
+        }
+
+    </script>
+    <script>
+        const activeLinkSidebar = document.querySelectorAll('.sidebar .inner .mobile-nav ul li');
+        for (let clickTab of activeLinkSidebar) {
+            clickTab.addEventListener('click', function() {
+                let activeClass = document.querySelectorAll('li.active');
+                activeClass[0].classList.remove('active')
+                clickTab.classList.add('active');
+            })
+        }
+
+    </script>
 </body>
 
 </html>

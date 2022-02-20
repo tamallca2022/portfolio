@@ -1,23 +1,5 @@
 @import 'fonts.css';
-
-
-:root {
-    --ff-title: 'Recoleta DEMO';
-    --ff-body: 'Product Sans';
-
-    --clr-primary: #685648;
-    --clr-accent: #fee0a5;
-    --clr-dark: #101010;
-
-    --shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-        100px 100px 80px rgba(0, 0, 0, 0.07);
-
-    --clip: polygon(0 0, 100% 0, 100% 93%, 0% 100%);
-}
+@import 'utility.css';
 
 html {
     -webkit-font-smoothing: antialiased;
@@ -48,26 +30,6 @@ ul {
     margin: 0;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: var(--clr-accent);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: var(--clr-primary);
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #fff;
-}
 
 .section-title {
     position: relative;
@@ -99,9 +61,12 @@ ul {
     background-color: #fff;
     padding: 0;
     margin: 0;
-    clip-path: var(--clip);
+    line-height: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
+/*
 .banner::after {
     content: "";
     position: absolute;
@@ -109,8 +74,15 @@ ul {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 51, 102, 0.9);
     z-index: 99;
+    clip-path: var(--clip);
+}
+*/
+
+.banner video {
+    height: 100vh;
+    clip-path: var(--clip);
 }
 
 .banner header {
@@ -121,7 +93,19 @@ ul {
     border-bottom: 1px solid #ffffff1A;
     padding: 40px 0;
     margin: 0;
-    z-index: 110;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.banner #header.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--clr-primary);
+    padding: 25px 0;
+    transition: 0.3s;
+    z-index: 99999;
 }
 
 .banner header .d-flex {
@@ -147,7 +131,7 @@ ul {
 
 .banner header nav ul li.active a,
 .banner header nav ul li a:hover {
-    color: #fee0a5;
+    color: var(--clr-accent);
 }
 
 .banner header .icon-block {
@@ -161,8 +145,33 @@ ul {
     margin: 0;
 }
 
+.banner header .icon-block a:nth-child(1) {
+    padding: 0 0 0 0;
+}
+
 .banner header .icon-block a:hover {
-    color: #fee0a5;
+    color: var(--clr-accent);
+}
+
+.banner header .mobile-menu {
+    display: none;
+}
+
+.banner header .mobile-menu .menu-btn {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: var(--clr-secondary);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner header .mobile-menu .menu-btn:hover {
+    color: var(--clr-accent);
+}
+
+.banner header .mobile-menu .menu-btn:active {
+    transform: scale(0.9);
 }
 
 .banner .desc {
@@ -171,13 +180,17 @@ ul {
     right: 0;
     left: 0;
     bottom: 0;
+    height: 100vh;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 105;
+    background-color: rgba(0, 51, 102, 0.9);
+    clip-path: var(--clip);
 }
+
 
 .banner .desc .content {
     max-width: 60%;
@@ -186,7 +199,7 @@ ul {
 .banner .desc .content h1 span {
     display: block;
     font-family: var(--ff-title);
-    font-size: 70px;
+    font-size: 5vw;
     font-weight: 400;
     line-height: 1.5;
     color: var(--clr-accent);
@@ -197,7 +210,7 @@ ul {
 
 .banner .desc .content h1 {
     font-family: var(--ff-title);
-    font-size: 90px;
+    font-size: 6.8vw;
     font-weight: 400;
     line-height: 1;
     color: #fff;
@@ -237,12 +250,12 @@ ul {
 }
 
 .banner .desc .content .btn:hover {
-    background-color: var(--clr-primary);
-    color: var(--clr-accent);
+    color: var(--clr-primary);
+    background-color: var(--clr-accent);
 }
 
 .banner .desc .content .btn:hover .fa-download {
-    color: var(--clr-accent);
+    color: var(--clr-primary);
 }
 
 /*ABOUT SECTION START*/
@@ -280,6 +293,9 @@ ul {
     animation: rotate 15s linear infinite;
 }
 
+.about-section .img-block .img-ring .ring {
+    transform: scale(1.8);
+}
 
 .about-section .text-block {
     padding: 0;
@@ -325,7 +341,7 @@ ul {
 
 .my-skills-section .card {
     text-align: center;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-secondary);
     border-radius: 15px;
     padding: 38px 40px;
     margin: 0;
@@ -409,7 +425,7 @@ ul {
     text-align: center;
     line-height: 0;
     border-radius: 15px;
-    background-color: rgb(250, 171, 42);
+    background-color: var(--clr-accent);
     box-shadow: inset 0px 8px 29px 0px rgba(0, 0, 0, 0.22);
     padding: 22px 0;
     overflow: hidden;
@@ -427,7 +443,7 @@ ul {
     top: 0;
     bottom: 0;
     background-color: #086398CC;
-    background: linear-gradient(0deg, rgba(8, 99, 152, 1) 40%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 51, 102, 1) 40%, rgba(0, 0, 0, 0) 100%);
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
@@ -489,6 +505,10 @@ ul {
 
 .reach-me-section .form-section form .input-box {
     margin-bottom: 30px;
+}
+
+.reach-me-section .form-section form .input-box:last-child {
+    margin-bottom: 0;
 }
 
 .reach-me-section .form-section form .input-box .form-control {
@@ -618,14 +638,77 @@ footer .footer-content .social-links a:hover {
     line-height: 24px;
 }
 
+/*Sidebar Menu*/
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 25vw;
+    transform: translateX(-100%);
+    z-index: 99999;
+    background-color: var(--clr-accent);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s cubic-bezier(.09, .72, .47, .97);
+}
 
+.sidebar.slide-in {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition: all 0.5s cubic-bezier(.09, .72, .47, .97);
+}
 
+.sidebar .inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.sidebar .btn-close {
+    position: absolute;
+    top: 3%;
+    right: 10%;
+}
 
+.sidebar .mobile-nav {
+    text-align: center;
+}
 
+.sidebar .mobile-nav ul {
+    padding: 0;
+    margin: 0;
+}
 
+.sidebar .mobile-nav ul li {
+    padding: 0;
+    margin: 0 0 20px 0;
+}
 
+.sidebar .mobile-nav ul li a {
+    font-family: var(--ff-body);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
 
+.sidebar .mobile-nav ul li.active a {
+    color: #fff;
+}
+
+.sidebar .mobile-nav ul li a:hover {
+    color: #fff;
+}
 
 /* Loader */
 
@@ -710,3 +793,330 @@ footer .footer-content .social-links a:hover {
         transform: translate(-50%, -50%) rotateZ(360deg);
     }
 }
+
+/* ++++++++++++++++++++++++++++
+        Media Quaries 
++++++++++++++++++++++++++++++++*/
+
+@media only screen and (orientation:landscape) {
+    body {
+        -webkit-text-size-adjust: none;
+    }
+}
+
+@media only screen and (orientation:portrait) {
+    body {
+        -webkit-text-size-adjust: none;
+    }
+}
+
+/*Break Points*/
+@media screen and (max-width: 1400px) {
+    .banner .desc .content {
+        max-width: 60%;
+        padding: 8% 0 0 0;
+    }
+
+    .banner .desc .content h1 {
+        font-size: 4.8vw;
+    }
+
+    .banner .desc .content h1 span {
+        font-size: 3vw;
+    }
+
+    .banner .desc .content p {
+        padding: 20px 0 30px 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .my-skills-section .card {
+        padding: 25px;
+    }
+
+    #myBtn {
+        bottom: 15%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .banner header {
+        padding: 30px 0;
+    }
+
+    .banner #header.sticky {
+        padding: 20px 0;
+    }
+
+    .banner header .logo-block {
+        width: 140px;
+    }
+
+    .banner header nav ul li {
+        padding: 0 12px;
+        margin: 0;
+    }
+
+    .banner header .icon-block a {
+        padding: 0 0 0 12px;
+    }
+
+    .banner .desc .content p {
+        font-size: 16px;
+    }
+
+    .banner .desc .content .btn {
+        font-size: 16px;
+        padding: 15px 32px 15px 32px;
+    }
+
+    .section-title {
+        font-size: 60px;
+    }
+
+    .about-section .text-block p {
+        font-size: 16px;
+        padding: 20px 0 0 0;
+    }
+
+    .my-skills-section .card-section .col-md-3 {
+        width: 50%;
+    }
+
+    .my-skills-section .card-section .col-md-3 .card {
+        margin: 0 0 30px 0;
+    }
+
+    .reach-me-section {
+        padding: 60px 0;
+    }
+
+    .reach-me-section .form-section form {
+        width: 75%;
+    }
+
+    #myBtn {
+        bottom: 3%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .banner .desc {
+        height: 101vh;
+    }
+
+    .my-skills-section .inner {
+        padding: 60px 0 100px 0;
+        background-color: var(--clr-primary);
+        clip-path: var(--clip);
+    }
+
+    .my-skills-section .card-section {
+        margin: 60px 0 0 0;
+    }
+
+    .my-works-section .inner {
+        --clip: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
+        padding: 60px 0 110px 0;
+    }
+
+    .reach-me-section .form-section {
+        margin: 60px 0 0 0;
+    }
+
+    #myBtn {
+        bottom: 15%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner header nav {
+        display: none;
+    }
+
+    .banner header .icon-block a:nth-child(1),
+    .banner header .icon-block a:nth-child(2) {
+        padding: 0 12px;
+    }
+
+    .banner header .mobile-menu {
+        display: block;
+    }
+
+    .banner .desc .content {
+        max-width: 75%;
+        padding: 8% 0 0 0;
+    }
+
+    .banner .desc .content h1 {
+        font-size: 6vw;
+    }
+
+    .banner .desc .content h1 span {
+        font-size: 5vw;
+    }
+
+    .about-section {
+        overflow-x: hidden;
+    }
+
+    .about-section .text-block {
+        margin: 60px 0 0 0;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 60px;
+        margin: 0 auto;
+    }
+
+    .my-works-section .inner {
+        --clip: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
+    }
+
+    .reach-me-section .form-section form {
+        width: 100%;
+    }
+
+    .reach-me-section .form-section form .input-box .form-control {
+        padding: 13px;
+    }
+
+    .reach-me-section .form-section form .input-box .btn-submit {
+        padding: 12px 34px;
+    }
+
+    footer .footer-content .copyright-block {
+        text-align: center;
+    }
+
+    footer .footer-content .social-links {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+
+    .sidebar {
+        width: min(50vw, 250px);
+        left: 0;
+    }
+
+    #myBtn {
+        --size: 40px;
+        bottom: 3%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .banner .desc .content h1 {
+        font-size: 9vw;
+    }
+
+    .about-section {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .banner video {
+        height: 100vh;
+        clip-path: none;
+    }
+
+    .banner #header.sticky {
+        position: static;
+    }
+
+    .banner .desc {
+        height: 100vh;
+        clip-path: none;
+    }
+
+    .about-section {
+        overflow-x: hidden;
+    }
+
+    .about-section .img-block .img-ring .ring {
+        transform: scale(2);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .banner .desc .content {
+        max-width: 100%;
+    }
+
+    .banner .desc .content h1 {
+        font-size: 13vw;
+    }
+
+    .banner .desc .content h1 span {
+        font-size: 10vw;
+    }
+
+    .banner .desc .content p {
+        font-size: 14px;
+    }
+
+    .banner .desc .content .btn {
+        font-size: 14px;
+        padding: 11px 24px 11px 24px;
+    }
+
+    .section-title {
+        font-size: 50px;
+        margin: 0 auto;
+    }
+
+    .section-title::after {
+        bottom: 6px;
+        width: calc(100% + 20px);
+        height: 10px;
+    }
+
+    .about-section .inner {
+        clip-path: none;
+    }
+
+    .my-skills-section .inner {
+        padding: 60px 0;
+        clip-path: none;
+    }
+
+    .my-skills-section .card-section .col-md-3 {
+        width: 100%;
+    }
+
+    .my-skills-section .card {
+        min-height: max-content;
+    }
+
+    .my-skills-section .card .icon-block {
+        margin-bottom: 25px;
+    }
+
+    .my-works-section .inner {
+        clip-path: none;
+        padding: 60px 0;
+    }
+
+    .my-works-section .card-section {
+        margin-top: 60px;
+    }
+
+    .my-works-section .card-section .img-card .overlay .text-content h3 {
+        font-size: 28px;
+    }
+
+
+}
+
+@media screen and (max-width:400px) {
+    footer .footer-content .copyright-block p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:350px) {}
+
+@media screen and (max-width:330px) {}
