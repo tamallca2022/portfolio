@@ -195,12 +195,13 @@ ul {
 
 .banner .desc .content {
     max-width: 60%;
+    padding:30px 0 0 0;
 }
 
 .banner .desc .content h1 span {
     display: block;
     font-family: var(--ff-title);
-    font-size: 5vw;
+    font-size: 80px;
     font-weight: 400;
     line-height: 1.5;
     color: #fff;
@@ -211,7 +212,7 @@ ul {
 
 .banner .desc .content h1 {
     font-family: var(--ff-title);
-    font-size: 6.8vw;
+    font-size: 100px;
     font-weight: 400;
     line-height: 1;
     color: var(--clr-accent);
@@ -818,11 +819,11 @@ footer .footer-content .social-links a:hover {
     }
 
     .banner .desc .content h1 {
-        font-size: 4.8vw;
+        font-size: 100px;
     }
 
     .banner .desc .content h1 span {
-        font-size: 3vw;
+        font-size: 80px;
     }
 
     .banner .desc .content p {
@@ -831,6 +832,12 @@ footer .footer-content .social-links a:hover {
 }
 
 @media screen and (max-width: 1199px) {
+    .banner .desc .content h1 {
+        font-size: 85px;
+    }
+    .banner .desc .content h1 span {
+        font-size: 67px;
+    }
     .my-skills-section .card {
         padding: 25px;
     }
@@ -841,6 +848,12 @@ footer .footer-content .social-links a:hover {
 }
 
 @media screen and (max-width: 991px) {
+    .banner .desc .content h1 {
+        font-size: 61px;
+    }
+    .banner .desc .content h1 span {
+        font-size: 55px;
+    }
     .banner header {
         padding: 30px 0;
     }
@@ -917,7 +930,6 @@ footer .footer-content .social-links a:hover {
     }
 
     .my-works-section .inner {
-        --clip: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
         padding: 60px 0 110px 0;
     }
 
@@ -950,11 +962,11 @@ footer .footer-content .social-links a:hover {
     }
 
     .banner .desc .content h1 {
-        font-size: 6vw;
+        font-size: 58px;
     }
 
     .banner .desc .content h1 span {
-        font-size: 5vw;
+        font-size: 45px;
     }
 
     .about-section {
@@ -971,9 +983,6 @@ footer .footer-content .social-links a:hover {
         margin: 0 auto;
     }
 
-    .my-works-section .inner {
-        --clip: polygon(0 0, 100% 0, 100% 98%, 0% 100%);
-    }
 
     .reach-me-section .form-section form {
         width: 100%;
@@ -1009,7 +1018,7 @@ footer .footer-content .social-links a:hover {
 
 @media screen and (max-width:700px) {
     .banner .desc .content h1 {
-        font-size: 9vw;
+        font-size: 55px;
     }
 
     .about-section {
@@ -1038,6 +1047,11 @@ footer .footer-content .social-links a:hover {
 
     .about-section .img-block .img-ring .ring {
         transform: scale(2);
+    }
+}
+@media screen and (max-width:520px) {
+        .banner .desc .content h1 {
+        font-size: 54px;
     }
 }
 
