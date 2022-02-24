@@ -1,0 +1,829 @@
+@import 'utility.css';
+@import 'theme.css';
+
+/*Header Start*/
+header {
+    background-color: var(--black);
+}
+
+header .header-top {
+    background-color: #fff;
+}
+
+header .header-top .contact-block ul li {
+    color: var(--primary-color);
+    margin-right: 2rem;
+}
+
+header .header-top .contact-block ul li a {
+    position: relative;
+    font-size: 1.4rem;
+    color: var(--black);
+    line-height: 1.3;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    transition: var(--trans);
+    z-index: 1;
+}
+
+header .header-top .contact-block ul li a .bx {
+    vertical-align: middle;
+}
+
+header .header-top .contact-block ul li a:hover {
+    color: var(--primary-color);
+}
+
+header .header-top .contact-block ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: .3rem;
+    width: 0%;
+    height: 30%;
+    border-radius: .5rem;
+    z-index: -1;
+    background: #a8eb12;
+    transition: var(--trans);
+}
+
+header .header-top .contact-block ul li a:hover::after {
+    width: 100%;
+}
+
+header .header-top .social-block ul li {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    line-height: 1.3;
+    font-weight: 600;
+    margin-left: 2rem;
+}
+
+header .header-top .social-block ul li:nth-child(1) {
+    margin-left: 0;
+}
+
+header .header-top .social-block ul li a {
+    position: relative;
+    font-size: 1.5rem;
+    color: var(--black);
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+    transition: var(--trans);
+    z-index: 1;
+}
+
+header .header-top .social-block ul li a:hover {
+    color: #fff;
+}
+
+header .header-top .social-block ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 0.4rem;
+    border-radius: 51% 49% 51% 49% / 29% 59% 41% 71%;
+    padding: 1rem;
+    transition: var(--trans);
+}
+
+header .header-top .social-block ul li a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+header .header-bottom {
+    background-color: var(--black);
+}
+
+header .header-bottom .brand {
+    width: 15rem;
+}
+
+header .header-bottom .navbar ul li {
+    margin-left: 2rem;
+}
+
+header .header-bottom .navbar ul li a {
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.3;
+    transition: var(--trans);
+}
+
+header .header-bottom .navbar ul li a:hover {
+    color: var(--accent-color);
+}
+
+header .header-bottom .hamburger {
+    background-color: transparent;
+    border: none;
+    display: none;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .header-bottom .hamburger #mode {
+    display: none;
+}
+
+header .header-bottom .hamburger label {
+    --size: 2.5rem;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    width: var(--size);
+    height: var(--size);
+    display: block;
+}
+
+header .header-bottom .hamburger label .bx.bx-bulb {
+    font-size: 2.5rem;
+    position: absolute;
+    color: #ffffff66;
+    transition: var(--trans);
+}
+
+header .header-bottom .hamburger #mode:checked + label > .bx.bx-bulb {
+    opacity: 1;
+    color: var(--accent-color);
+    filter: drop-shadow(2px 2px 10px rgba(168, 235, 18, 0.9));
+}
+
+header .header-bottom .hamburger #mode:checked + label > .bx.bx-bulb:active {
+    transform: scale(0.9);
+}
+
+/*Banner*/
+.banner {
+    position: relative;
+    background-color: #fff;
+    margin: 0;
+    line-height: 0;
+}
+
+.banner .banner-desktop {}
+
+.banner .banner-mobile {
+    display: none;
+}
+
+.banner .desc {
+    position: absolute;
+    background-color: transparent;
+    inset: 0;
+}
+
+.banner .desc .df {
+    height: 100%;
+}
+
+.banner .hero-text {
+    width: 55%;
+}
+
+.banner .hero-text h1 {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    color: var(--primary-color);
+    line-height: 1.1;
+    font-weight: 400;
+}
+
+.banner .hero-text h1 span {
+    font-family: var(--secondary-font);
+
+    font-size: 8rem;
+    display: block;
+    color: var(--black);
+    font-weight: 800;
+}
+
+.banner .hero-text p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.banner .hero-text a.btn {
+    font-family: inherit;
+    color: var(--off-white);
+    background-color: var(--black);
+    padding: 1.5rem 2.4rem !important;
+    margin-top: 30px;
+}
+
+.banner .my-photo {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transform: rotate(5deg);
+    position: relative;
+    transition: var(--trans);
+}
+
+.banner .my-photo:hover {
+    transform: rotate(0deg);
+}
+
+.banner .my-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 4px solid #ddd;
+    transform: rotate(-10deg);
+    z-index: -1;
+    transition: var(--trans);
+}
+
+.banner .my-photo:hover::after {
+    transform: rotate(0deg);
+}
+
+/*About Me*/
+
+.about-me {
+    /*    background: transparent url(../images/bg.png) repeat fixed 0% 0%;*/
+    background-image: url(../images/svg-bg.svg);
+    background-position: bottom center;
+    background-size: cover;
+    background-color: #fff;
+    padding: 10rem 0;
+}
+
+.about-me .about-text .section-title {
+    text-align: left;
+}
+
+.about-me .about-text p {
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.5;
+    padding: 0;
+    margin: 0 0 1.8rem 0;
+}
+
+.about-me .about-img {
+    border: 4px solid #ebebeb;
+    line-height: 0;
+    box-shadow: var(--shadow);
+}
+
+/*My Skills*/
+.my-skills {
+    background-color: #f5f5f5;
+    padding: 6rem 0;
+}
+
+/*My Works*/
+.my-works {
+    background-color: #fff;
+    padding: 6rem 0;
+}
+
+.my-works .work-card {
+    border: .1rem solid #ebebeb;
+    border-radius: .3rem;
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0 0 3rem 0;
+    min-height: 547px;
+    box-shadow: var(--shadow);
+    transition: var(--trans);
+}
+
+.my-works .work-card:hover {
+    box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px, rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
+
+.my-works .work-card .work-img {
+    overflow: hidden;
+    line-height: 0;
+}
+
+.my-works .work-card .work-text {
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.my-works .work-card .work-text h4 {
+    font-size: 2rem;
+    color: #000;
+    line-height: 1.3;
+    font-weight: 600;
+    padding: 0 0 1rem 0;
+    margin: 0;
+}
+
+.my-works .work-card .work-text h4 small {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.my-works .work-card .work-text p {
+    font-size: 1.4rem;
+    color: #000;
+    line-height: 1.3;
+    font-weight: 400;
+    padding: 0 0 2rem 0;
+    margin: 0;
+}
+
+.my-works .work-card .work-text .btn {
+    background-color: #000;
+    color: var(--off-white);
+    border: .1rem solid #000;
+    margin-right: 1rem;
+}
+
+.my-works .work-card .work-text a.btn.btn-outline {
+    border: .1rem solid #000;
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+/*Get in Touch*/
+.get-in-touch {
+    background: transparent url(../images/bg.png) repeat fixed 0% 0%;
+    padding: 6rem 0;
+    margin: 0;
+}
+
+/*
+.get-in-touch h2 {
+    font-size: 4rem;
+    color: var(--black);
+    line-height: 1.3;
+    padding: 0;
+    margin: 0 0 3rem 0;
+}
+*/
+.get-in-touch .sub-title {
+    font-size: 1.6rem;
+    color: var(--black);
+    line-height: 1.3;
+    padding: 0;
+}
+
+.get-in-touch form .input-group .form-control {
+    border-radius: .3rem;
+    padding: 1.5rem;
+    transition: var(--trans);
+}
+
+.get-in-touch form .input-group textarea.form-control {
+    height: 10rem;
+    resize: none;
+}
+
+.get-in-touch form .input-group .form-control:focus {
+    border: .1rem solid #000;
+    outline: none;
+}
+
+.get-in-touch form .input-group .btn.btn-submit {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    color: var(--off-white);
+    background-color: var(--black);
+    padding: 1.2rem 2.4rem !important;
+    transition: var(--trans);
+}
+
+.get-in-touch form .input-group .btn.btn-submit:active {
+    transform: scale(.9);
+}
+
+.get-in-touch form .input-group #msg {
+    display: none;
+    font-size: 1.3rem;
+    color: #2cbc63;
+    font-weight: 400;
+    background-color: #d3ffe3;
+    border-radius: .5rem;
+    padding: .3rem .6rem;
+}
+
+.get-in-touch address a {
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.get-in-touch .links a {
+    display: block;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: #000;
+    line-height: 1.3;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.get-in-touch .links a .bx {
+    vertical-align: middle;
+}
+
+.get-in-touch .map-block {
+    border: 1px solid #efefef;
+    border-radius: .3rem;
+}
+
+.get-in-touch .map-block iframe {
+    display: block;
+    border: none;
+    outline: none;
+    max-width: 100%;
+    width: 100%;
+    height: 19rem;
+}
+
+
+/*Footer*/
+footer {
+    background-color: var(--black);
+    color: #fff;
+    margin: 0;
+}
+
+footer p {
+    font-size: 1.4rem;
+    color: #999;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    font-size: 1.4rem;
+    color: var(--off-white);
+    line-height: 1.3;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    transition: var(--trans);
+}
+
+footer ul li a:hover {
+    color: var(--accent-color);
+}
+
+
+/*Back to top*/
+button#back2top {
+    /*Button will appear on bottom-right corner of the page */
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    opacity: 0;
+    visibility: hidden;
+
+    /*For better looking button*/
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #000;
+    border: .1rem solid #000;
+    outline: none;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .3rem;
+}
+
+
+/*400 Page*/
+.error-page-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 5rem;
+    color: crimson;
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+}
+
+.error-page-sub-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 2.5rem;
+    color: #666;
+    line-height: 1.3;
+}
+
+.error-page-link {
+    display: inline-block;
+}
+
+/*Preloader*/
+#preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999999;
+}
+
+#preloader img {
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+.footer-menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -4px 12px;
+}
+
+.footer-menu ul li a {
+    position: relative;
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: #585858;
+    line-height: 1;
+    text-transform: capitalize;
+    padding: 0 0 1rem 0;
+    margin: 0;
+    transition: var(--trans);
+}
+
+.footer-menu ul li.active a::after,
+.footer-menu ul li a:hover::after {
+    --size: .5rem;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: var(--size);
+    height: var(--size);
+
+    background-color: #000;
+    border-radius: 5rem;
+}
+
+.footer-menu ul li a span {
+    display: block;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.footer-menu ul li.active a,
+.footer-menu ul li a:hover {
+    color: #000;
+}
+
+.footer-menu ul li a:active {
+    transform: scale(.95);
+}
+
+/*Media Query*/
+@media screen and (max-width: 1024px) {
+    .banner .hero-text h1 span {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .banner .hero-text h1 span {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .banner .hero-text h1 span {
+        font-size: 5rem;
+    }
+
+    .about-me .leg-8,
+    .about-me .leg-4 {
+        width: 50%
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner .banner-desktop {
+        display: none;
+    }
+
+    .banner .banner-mobile {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .banner .desc {
+        position: static;
+        text-align: center;
+    }
+
+    .banner .desc .hero-text {
+        width: 100%;
+        padding: 3rem 0 0 0;
+    }
+
+    .banner .hero-text p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+    }
+
+    .my-skills .leg-4 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .about-me .leg-8,
+    .about-me .leg-4 {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 4rem;
+    }
+
+    .my-works .work-card {
+        min-height: max-content;
+    }
+}
+
+@media screen and (max-width: 528px) {
+    header .header-bottom .brand {
+        width: 15rem;
+        margin: 0 auto;
+    }
+
+    nav.navbar {
+        margin: 2rem auto 0;
+    }
+
+    .about-me .leg-8,
+    .about-me .leg-4 {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .header-bottom .brand {
+        margin: 0;
+    }
+
+    .banner .banner-desktop {
+        display: none;
+    }
+
+    .banner .banner-mobile {
+        display: block;
+    }
+
+    .banner .banner-mobile {
+        max-width: 100%;
+        height: auto;
+    }
+
+    header .header-bottom nav.navbar {
+        display: none;
+    }
+
+    header .header-bottom .hamburger {
+        display: block;
+    }
+
+    header .header-top .contact-block ul li {
+        margin-bottom: 0.7rem;
+    }
+
+    .about-me {
+        background: #fff;
+    }
+
+    .about-me .about-text,
+    .about-me .about-text .section-title {
+        text-align: center;
+    }
+
+    .footer-menu {
+        display: block;
+    }
+
+    .banner {
+        padding: 0;
+        line-height: 0;
+    }
+
+    .banner .desc {
+        position: static;
+        text-align: center;
+        padding: 3rem 0;
+    }
+
+    .banner .hero-text {
+        width: 100%;
+    }
+
+    .banner .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .banner .hero-text h1 span {
+        font-size: 5rem;
+    }
+
+    .banner .hero-text p {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .banner .my-photo {
+        margin-top: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-me {
+        padding: 3rem 0;
+    }
+
+    .about-me p {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        padding: 0;
+        margin: 0 0 2rem 0;
+    }
+
+    .my-skills {
+        padding: 3rem 0;
+    }
+
+    .my-skills .df .leg-4 {
+        width: 50%;
+    }
+
+    .my-works {
+        padding: 3rem 0;
+    }
+
+    .get-in-touch {
+        padding: 3rem 0;
+    }
+
+    .get-in-touch form#form {
+        margin-bottom: 3rem;
+    }
+
+    footer {
+        margin-bottom: 6rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .banner .hero-text h1 span {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .my-skills .df .leg-4 {
+        width: 100%;
+    }
+}

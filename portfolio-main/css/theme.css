@@ -1,0 +1,119 @@
+/*Dark Theme CSS*/
+
+body.dark {
+    /*    --bg-dark: #1e272e;*/
+    --bg-dark: #2A2B41;
+    --off-yellow: #CECDB8;
+    background-color: var(--bg-dark);
+}
+
+body.dark header .header-top {
+    background-color: var(--bg-dark);
+}
+
+body.dark header .header-top .contact-block ul li a,
+body.dark header .header-top .social-block ul li,
+body.dark header .header-top .social-block ul li a {
+    color: var(--off-yellow);
+}
+
+body.dark header .header-bottom {
+    background-color: var(--bg-dark);
+}
+
+body.dark .banner .desc {
+    background-color: var(--bg-dark);
+}
+
+body.dark .banner .hero-text h1,
+body.dark .banner .hero-text h1 span,
+body.dark .banner .hero-text p {
+    color: var(--off-yellow);
+}
+
+body.dark .banner .hero-text a.btn {
+    color: #000;
+    background-color: var(--off-yellow);
+}
+
+body.dark .about-me {
+    background: var(--bg-dark);
+}
+
+body.dark .about-me .section-title,
+body.dark .about-me p {
+    color: var(--off-yellow);
+}
+
+body.dark .my-skills {
+    background: var(--bg-dark);
+}
+
+body.dark .my-skills .section-title {
+    color: var(--off-yellow);
+}
+
+body.dark .my-skills .card {
+    background-color: var(--bg-dark);
+    border-color: var(--bg-dark);
+    box-shadow: rgba(0 0 0 / 30%) 0px 8px 24px;
+}
+
+body.dark .my-skills .card .card-img img {
+    filter: brightness(4);
+}
+
+body.dark .my-skills .card .card-body h3 {
+    color: var(--off-yellow);
+}
+
+body.dark .my-works {
+    background: var(--bg-dark);
+}
+
+body.dark .my-works .section-title {
+    color: var(--off-yellow);
+}
+
+body.dark .get-in-touch {
+    background: var(--bg-dark);
+}
+
+body.dark .get-in-touch h2 {
+    color: var(--off-yellow);
+}
+
+body.dark .get-in-touch .sub-title {
+    color: var(--off-yellow);
+}
+
+body.dark .get-in-touch address p i.bx,
+body.dark .get-in-touch address p a {
+    color: var(--off-yellow);
+}
+
+body.dark .get-in-touch .links a {
+    color: var(--off-yellow);
+}
+
+body.dark footer {
+    background-color: var(--bg-dark);
+}
+
+body.dark .footer-menu {
+    background: var(--bg-dark);
+}
+
+body.dark .footer-menu ul li a {
+    color: #717393;
+}
+
+body.dark .footer-menu ul li.active a,
+body.dark .footer-menu ul li a:hover {
+    color: var(--off-yellow);
+}
+
+body.dark .footer-menu ul li.active a::after,
+body.dark .footer-menu ul li a:hover::after {
+    background-color: var(--off-yellow);
+}

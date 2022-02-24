@@ -195,7 +195,7 @@ ul {
 
 .banner .desc .content {
     max-width: 60%;
-    padding:30px 0 0 0;
+    padding: 30px 0 0 0;
 }
 
 .banner .desc .content h1 span {
@@ -343,25 +343,24 @@ ul {
 
 .my-skills-section .card {
     text-align: center;
-    background-color: var(--clr-secondary);
-    border-radius: 15px;
-    padding: 38px 40px;
-    margin: 0;
+    background-color: #fff;
+    padding: 38px 30px;
+    margin: 0 0 30px 0;
     box-shadow: var(--shadow);
     min-height: 386px;
-
+    border: 1px solid var(--clr-accent);
 }
 
 .my-skills-section .card .icon-block {
     width: 90px;
     height: 90px;
-    background-color: var(--clr-primary);
+    background-color: var(--clr-accent);
     border-radius: 40% 60% 64% 36% / 36% 38% 62% 64%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
 }
 
 .my-skills-section .card-section .row .col-md-3:nth-child(2) .card .icon-block {
@@ -377,7 +376,7 @@ ul {
 }
 
 .my-skills-section .card h3 {
-    font-family: inherit;
+    font-family: var(--ff-title);
     font-size: 25px;
     color: var(--clr-primary);
     line-height: 1.5;
@@ -819,15 +818,19 @@ footer .footer-content .social-links a:hover {
     }
 
     .banner .desc .content h1 {
-        font-size: 100px;
+        font-size: 80px;
     }
 
     .banner .desc .content h1 span {
-        font-size: 80px;
+        font-size: 70px;
     }
 
     .banner .desc .content p {
         padding: 20px 0 30px 0;
+    }
+
+    .my-skills-section .card {
+        min-height: 410px;
     }
 }
 
@@ -835,9 +838,11 @@ footer .footer-content .social-links a:hover {
     .banner .desc .content h1 {
         font-size: 85px;
     }
+
     .banner .desc .content h1 span {
         font-size: 67px;
     }
+
     .my-skills-section .card {
         padding: 25px;
     }
@@ -851,9 +856,11 @@ footer .footer-content .social-links a:hover {
     .banner .desc .content h1 {
         font-size: 61px;
     }
+
     .banner .desc .content h1 span {
         font-size: 55px;
     }
+
     .banner header {
         padding: 30px 0;
     }
@@ -1049,8 +1056,9 @@ footer .footer-content .social-links a:hover {
         transform: scale(2);
     }
 }
+
 @media screen and (max-width:520px) {
-        .banner .desc .content h1 {
+    .banner .desc .content h1 {
         font-size: 54px;
     }
 }
